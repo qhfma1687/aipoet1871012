@@ -8,11 +8,14 @@ import os
 from langchain_openai import ChatOpenAI
 import streamlit as st
 
-# 환경 변수 로드
-load_dotenv()
+# # 환경 변수 로드
+# load_dotenv()
 
-# OpenAI API 키 로드 및 확인
-api_key = os.getenv("OPENAI_API_KEY")
+# # OpenAI API 키 로드 및 확인
+# api_key = os.getenv("OPENAI_API_KEY")
+
+st.secrets["OpenAI_key"] == "your OpenAI key"
+
 if not api_key:
     st.error("API 키가 설정되지 않았습니다.")
 else:
